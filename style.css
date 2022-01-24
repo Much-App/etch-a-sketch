@@ -1,0 +1,136 @@
+html {
+    height: 100%;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    height: 100%;
+}
+#main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+#header {
+    display: flex;
+    flex-direction: row;
+    background-color:#212121;
+    padding: 10px;
+    margin: 0;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 34px;
+    color: #14FFEC;
+}
+
+#footer{
+    display: flex;
+    flex-direction: row;
+    background-color: #212121;
+    padding: 10px;
+    margin: 0;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #14FFEC;
+}
+#title {
+    font: bold 46px Georgia, serif;
+    color: #0D7377;
+    background-color: #44ffef3d;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+#center {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#sizer {
+    display: flex;  
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    
+}
+#etch {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    border: 3px solid black;
+    height: 500px;
+    width: 500px;
+}
+#settings {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    
+}
+button {
+    border-radius: 10%;
+    color: #323232;
+    padding: 8px 12px 8px 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100px;
+    height: auto;
+}
+button#black {
+    background-color: #000000;
+    color: white;
+}
+button#rainbow {
+    background-color: tomato;
+    color: yellowgreen;
+}
+button#gray {
+    background-color: grey;
+    color: black;
+}
+button#choose {
+    background-color: #0D7377;
+    color: white;
+}
+button#clear {
+    background-color: rgb(255, 255, 255);
+    font-style: italic ;
+    padding: 3px 10px 3px 10px;
+    margin: 0;
+    width: fit-content;
+}
+
+#pixel {
+    background-color: slateblue;
+    width: 100%;
+}
+
+#square {
+    display: flex;
+    flex-flow: row wrap;
+    height: 0;
+    width: 0;
+    background-color: #a06161 ;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Color palette
+#212121
+#323232
+#0D7377
+#14FFEC
+*/
