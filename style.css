@@ -94,23 +94,25 @@ button#black {
     color: white;
 }
 button#rainbow {
-    background-color: tomato;
-    color: yellowgreen;
+    background: linear-gradient(90deg, #F9ED69, #F08A5D,#B83B5E,#6A2C70);
+    color: #212121;
 }
 button#gray {
-    background-color: grey;
-    color: black;
+    background: linear-gradient(90deg, rgb(121, 121, 121), rgb(189, 189, 189),white);
+    color: #212121;
 }
-button#choose {
-    background-color: #0D7377;
-    color: white;
+button#eraser {
+    background: white;
+    color: #212121;
 }
+
 button#clear {
     background-color: rgb(255, 255, 255);
     font-style: italic ;
     padding: 3px 10px 3px 10px;
     margin: 0;
     width: fit-content;
+    color: #212121;
 }
 
 #pixel {

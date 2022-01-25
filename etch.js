@@ -1,26 +1,53 @@
 
 
-/* colors*/
-const COLOR = "hsl(0, 50%, 0%)"
-const mode = "default"
-/* setting buttons */
+/* default colors/mode*/
+let hue = 0
+let saturation = 50
+let light = 0
+let COLOR = `hsl(0, 50%, 0%)`;
+let mode = "black"
+
 const btnBlack = document.querySelector('#black');
 const btnRainbow = document.querySelector('#rainbow');
 const btnGray = document.querySelector('#gray');
-const btnChoose = document.querySelector('#choose');
 const btnEraser = document.querySelector('#eraser');
 const btnClear = document.querySelector('#clear');
-/* slider and container */
+
+btnBlack.addEventListener("click",setMode)
+btnRainbow.addEventListener("click",setMode)
+btnGray.addEventListener("click",setMode)
+btnEraser.addEventListener("click",setMode) 
+btnClear.addEventListener("click",createGrid) 
+
+
 const slider = document.querySelector('#slider');
 const etchContainer = document.querySelector('#etch');
-/* event listeners */
 slider.addEventListener("change",changeSize)
-btnClear.addEventListener("click",createGrid)
 
 
-    
 
-
+function setMode(){
+    mode = this.id
+    console.log (mode)
+    if (mode === "black") {
+        saturation = 50;
+        light = 0;
+        console.log('black');
+    } else if (mode === "rainbow") {
+        hue = 0;
+        saturation = 50;
+        light = 50;
+        console.log('rainbow')
+    } else if (mode === "gray") {
+        hue = 0;
+        saturation = 0;
+        light = 50;
+        console.log('gray');
+    } else if (mode === "eraser") {
+        light = 100;
+        console.log('eraser')
+    }
+}
 
 
 /* functions */
@@ -46,11 +73,17 @@ function emptyGrid (parent) {
     }
 }
 
+
 function hoverColor () {
+    updateColor()
     this.style.backgroundColor = COLOR
+    hue += 10
+    
 }
 
-
+function updateColor () {
+    return COLOR = `hsl(${hue}, ${saturation}%, ${light}%)`
+}
 
 
 createGrid()
